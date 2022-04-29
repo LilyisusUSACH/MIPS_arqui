@@ -4,13 +4,13 @@ def div(i, n):
         i = i - n
         acum += 1
     rep = 0
-    while i > 0 and rep < 4: # Hay resto
-        i = i * 10
-        acum = acum *10
+    i = i * 100
+    resto = 0
+    while rep < 2: # Hay resto
         rep += 1
         while i >= n:
             i = i - n
-            acum += 1
-    return acum/pow(10,rep)
+            resto += 1
+    return acum , resto
 
-print(div(3,3))
+print(div(1,2))
