@@ -1,1 +1,2 @@
-acum + 1
+for each in jprom:
+    print(each)
