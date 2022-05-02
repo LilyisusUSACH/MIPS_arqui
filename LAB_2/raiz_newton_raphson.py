@@ -14,7 +14,10 @@ eficacia = np.zeros(100)
 eficacia[0] = 0
 diferencia[0] = math.inf
 resultado = ""
-for i in range(1,100):
+for i in range(1,100): # no se toma en cuenta el 0
+                    # ya que es un problema de distancia
+                    # y seria ilogico calcular la distancia 
+                    # entre 2 vectore iguales
     for j in range(1,100):
         sqrt = math.sqrt(i)
         new = newton(j,i,0)
@@ -22,10 +25,10 @@ for i in range(1,100):
         dif = abs(sqrt - new)
         eficacia[j] = eficacia[j] + efi
         diferencia[j] = diferencia[j] + dif
-
+"""
 for each in eficacia:
     print(each)
-
+"""
 result = np.where(eficacia == np.amax(eficacia))
 print(result[0],np.amax(eficacia))
 
