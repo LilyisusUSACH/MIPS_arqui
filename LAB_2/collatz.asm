@@ -26,7 +26,7 @@ secuencia_collatz:
 	li $t0, 715827882 #limite de reg 2147483647
 	# tiene que ser < 715.827.882
 	li $t1, 0x100100A0
-	# lim memoria 348 o 0x10010200
+	# lim memoria 0x10040000
 	li $t2, 0x10040000
 
 	add $s0,$zero,$a0 # numero de secuencia, pedirlo por consola
